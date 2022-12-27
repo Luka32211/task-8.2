@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Угадайка</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row game-card align-items-center">
+        <div class="col col-md-4 offset-md-4">
+            <div class="card text-center" id="start">
+                <div class="card-header header">
+                    <p class="m-0">Угадайка</p>
+                </div>
+                <div class="card-body padding-bottom">
+                    <div class="row no-gutters">
+                        <div class="col text-style">
+                            Введите минимальное и максимальное значение числа для игры (от -999 до 999)
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body padding-bottom">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <input id="inputBegin" class="input" type="text" placeholder="От -999"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body padding-bottom">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <input id="inputEnd" class="input" type="text" placeholder="До 999"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer" id="start-but">
+                    Далее
+                </div>
+            </div>
+
+            <div class="card text-center collapse" id="step">
+                <div class="card-header header">
+                    <p class="m-0">Условие</p>
+                </div>
+                <div class="card-body padding-bottom-step">
+                    <div class="row no-gutters">
+                        <div class="col text-style-step">
+                            Загадайте любое целое число от <span id="minValue"></span> до <span id="maxValue"></span>, а я его угадаю
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer" id="step-but">
+                    Начать игру
+                </div>
+            </div>
+
+            <div class="card text-center collapse" id="game">
+                <div class="card-header header">
+                    <p class="m-0">Вопрос №<span id="orderNumberField">5</span></p>
+                </div>
+                <div class="card-body">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <h3 class="card-title m-0"><span id="answerField">Вы загадали число 5?</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="btn-group">
+                        <button class="btn btn-info" id="btnLess">&#129047;<br>меньше</button>
+                        <button class="btn btn-success btn-lg" id="btnEqual">Верно!</button>
+                        <button class="btn btn-info" id="btnOver">больше<br>&#129045;</button>
+                    </div>
+                </div>
+                <div class="card-footer" id="btnRetry">
+                    Заново
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
